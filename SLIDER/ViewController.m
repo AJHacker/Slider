@@ -9,11 +9,24 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
 @end
 
 @implementation ViewController
-
+-(IBAction)sliderPressed:(id)sender{
+    float value = [slider value];
+    NSString *labelString = [[NSString alloc]
+        initWithFormat:@"THE SLIDER VALUE IS: %f", value];
+    [sliderLabel setText:labelString];
+     
+}
+-(IBAction)textEntered:(id)sender{
+    [nameInput resignFirstResponder];
+    NSString *nameLabelString = [[NSString alloc] initWithFormat:@"hello %@",[nameInput text]];
+    [nameLabel setText:nameLabelString];
+}
+-(IBAction)buttonPressed:(id)sender{
+    
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
